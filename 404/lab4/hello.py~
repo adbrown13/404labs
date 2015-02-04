@@ -1,0 +1,38 @@
+from flask import Flask
+app = Flask(__name__)
+
+
+
+@app.route('/')
+def show_entries():
+    db = get_db()
+    cur = db.execute('select title, text from entries order by id desc')
+    entries = cur.fetchall()
+    return render_template('show_entries.html', entries=entries)
+@app.route('/')
+def hello_world():
+    return '''<form >
+	Category:
+        <input type=text size=30 name=category><br>
+        Priority:
+        <input type=number name=priority ><br>
+	Description:
+	<input type=text name=description ><br>
+        <input type=submit value=Add>
+      
+    </form>'''
+def get_db():
+    """Opens a new database connection if there is none yet for the
+    current application context.
+    """
+    if not hasattr(g, 'ashleytasks.db'):
+        g.sqlite_db = connect_db()
+    return g.sqlite_db
+def close_db(error):
+    """Closes the database again at the end of the request."""
+    if hasattr(g, 'ashleytasks.db'):
+        g.sqlite_db.close()
+
+
+if __name__ == '__main__':
+    app.run()
