@@ -1,0 +1,22 @@
+body            { font-family: sans-serif; background: moccasin; }
+a, h1	        { color: BurlyWood; }
+h1          	{ font-family: 'Georgia', serif; margin: 0; border-bottom: 2px solid tan; }
+table, th, td 	{ border: 1px solid tan; }
+td				{ text-align: center; }
+th				{ background-color: #fafafa; color: BurlyWood; }
+table			{ width: 100%; border-collapse: collapse; }
+
+.page           { margin: 2em auto; width: 35em; border: 5px solid tan;
+                  padding: 0.8em; background: wheat; }
+.metanav        { text-align: right; font-size: 0.8em; padding: 0.3em;
+                  margin-bottom: 1em; background: wheat; }
+.flash          { background: #CEE5F5; padding: 0.5em;
+                  border: 1px solid #AACBE2; }
+.error          { background: #F0D6D6; padding: 0.5em; }
+
+.operation_form	{ display: inline-block; }
+
+.col_category	{ width: 20%; }
+.col_priority	{ width: 10%; }
+.col_desc		{ width: 50%; }
+.col_op			{ width: 20%; }
