@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+33e!qkdh*rr^%_7e67)0y)&yafi4)kuhrkm++&haw5-u^)@=&'
+SECRET_KEY = '^$9(pvphy!l8vtx+mfid_y0tj3o@7c$+l@&qyjoj^+mcq3%vn5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,11 +82,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_PATH=os.path.abspath(os.path.join(BASE_DIR,'static'))
-STATICFILES_DIRS=(
-    STATIC_PATH,
+# local filesystem path for Django to get static files
+STATIC_PATH = os.path.abspath(os.path.join(BASE_DIR, 'static'))
+STATICFILES_DIRS = (
+                    STATIC_PATH,
 )
-TEMPLATE_PATH=os.path.abspath(os.path.join(BASE_DIR,'templates'))
-TEMPLATE_DIRS=(
-    TEMPLATE_PATH,
+
+# Templates
+TEMPLATE_PATH = os.path.abspath(os.path.join(BASE_DIR, 'templates'))
+TEMPLATE_DIRS = (
+                 TEMPLATE_PATH,
 )

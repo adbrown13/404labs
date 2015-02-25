@@ -63,5 +63,5 @@ if __name__ == '__main__':
     print "Starting Rango population script..."
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bookmarks.settings')
     django.setup()
-    from main.models import Link, Tag
-    populate()
+from main.models import Link, Tag
+populate()
